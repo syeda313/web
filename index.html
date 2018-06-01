@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset= "utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+	<title>Your Own Personal Shopping</title>
+	<script type="text/javascript">
+		function shopForm()
+		{
+			
+			
+			var info = new Array();
+			
+			var firstName,lastName;
+			var streetAddress
+			var city, state, zipCode;
+			var quantity;
+			var price;
+			 
+			firstName = document.practiceForm.txtFirstName.value;
+			lastName = document.practiceForm.txtLastName.value;
+			
+			
+			streetAddress = document.practiceForm.txtStreet.value;
+			
+			
+			city = document.practiceForm.txtCity.value;
+			state = document.practiceForm.txtState.value;
+			zipCode = document.practiceForm.txtZipCode.value;
+			
+			
+			price = document.practiceForm.selItem.value;
+			
+			
+			quantity = document.practiceForm.numQuantity.value;
+			
+			
+			info.push(firstName, lastName, streetAddress, city, state, zipCode, quantity, price, quantity*price);
+		alert("Your Name is: " + info[0] + " " + info[1] + "\nYour Address is: " + info[2] + ", " + info[3] + ", " + info[4] + " " + info[5] + "\n The quantity given is: " + info[6] + "\n The Price for item is: $" + info[7] + "\n Your total will be: $ " + info[8]);
+		
+			
+		}
+	</script>
+</head>
+<body>
+<h1>Ready, Set, Let's Shop!</h1>
+<hr>
+<p>Enter all the information in the boxes provided below. Then select Items for purchase.</p>
+
+<form name="practiceForm">
+<p>First Name: <input type="text" name="txtFirstName" ></p>
+
+<p>Last Name: <input type="text" name="txtLastName" ></p>
+
+<p>Street: <input type="text" name="txtStreet" ></p>
+
+<p>City: <input type="text" name="txtCity" >
+
+State: <input type="text" name="txtState" >
+
+ZipCode: <input type="text" name="txtZipCode" ></p>
+
+<p>Which item would you like to buy?
+	<select name="selItem">
+		<option value=40.99>Jeans - $40.99 each</option>
+		<option value=8>Blouse - $8 each</option>
+		<option value=20>Shoes - $20 each</option>
+		<option value=5>Hat - $5 each</option>
+	</select>
+</p>
+
+<p>How many would you like to purchase? <input type="number" name="numQuantity" ></p>
+
+<p><input type="button" value="Go!" name="btnSubmit" onclick="shopForm()"></p>
+</form>
+
+</body>
+</html>
+				
